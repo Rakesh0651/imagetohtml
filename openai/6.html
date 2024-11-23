@@ -1,0 +1,90 @@
+# Constructing the HTML content based on the extracted text
+
+html_content_with_rowspan_colspan = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex AI Table</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 18px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <h1>More Complex Table with Rowspan and Colspan</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Technology</th>
+                <th>Purpose</th>
+                <th>Applications</th>
+                <th>Advantages</th>
+                <th>Challenges</th>
+                <th>Popular Tools/Frameworks</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">Machine Learning</td>
+                <td rowspan="2">Enable systems to learn from data without explicit programming</td>
+                <td>Predictive analytics, recommendation systems</td>
+                <td>Scalable, handles large datasets, automates decisions</td>
+                <td>Requires a lot of data, potential bias if data is flawed</td>
+                <td>TensorFlow, PyTorch, Scikit-learn</td>
+            </tr>
+            <tr>
+                <td>Deep Learning</td>
+                <td>High accuracy in complex tasks, automates feature extraction</td>
+                <td>High computational cost, large data requirements</td>
+                <td>Keras, TensorFlow, PyTorch</td>
+            </tr>
+            <tr>
+                <td>Natural Language Processing (NLP)</td>
+                <td>Enable machines to understand and generate human language</td>
+                <td>Sentiment analysis, chatbots, machine translation</td>
+                <td>Improves customer interactions, automated text processing</td>
+                <td>Language complexity, contextual challenges</td>
+                <td>NLTK, SpaCy, Hugging Face Transformers</td>
+            </tr>
+            <tr>
+                <td>Computer Vision</td>
+                <td>Enable machines to interpret visual data</td>
+                <td>Facial recognition, self-driving cars, medical imaging</td>
+                <td>Automation in critical areas like healthcare</td>
+                <td>Privacy concerns, real-world accuracy</td>
+                <td>OpenCV, TensorFlow, PyTorch</td>
+            </tr>
+            <tr>
+                <td>Reinforcement Learning</td>
+                <td>Learn optimal actions through trial and error</td>
+                <td>Robotics, gaming, autonomous vehicles</td>
+                <td>Can adapt to complex, dynamic environments</td>
+                <td>Expensive to train, needs simulated environments</td>
+                <td>OpenAI Gym, RLlib, Stable-Baselines3</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+"""
+
+# Save the HTML content to a file
+output_complex_html_path = "/mnt/data/Complex_AI_Technologies_Rowspan_Colspan.html"
+with open(output_complex_html_path, "w") as file:
+    file.write(html_content_with_rowspan_colspan)
+
+output_complex_html_path
